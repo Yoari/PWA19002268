@@ -1,5 +1,5 @@
 
-interface producto{
+export interface producto{
     desc:string;
     precio:number;
 }
@@ -25,7 +25,7 @@ const articulos1=[telefono,tablet];
 const totIva=calcularIva(articulos1);
 console.log('El total + IVA : ', totIva);
 
-function calcularIVA(productos:producto[]):[number,number]{
+export function calcularIVA(productos:producto[]):[number,number]{
     let total=0
     productos.forEach(({precio})=>{
         total+=precio;
